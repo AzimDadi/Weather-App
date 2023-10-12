@@ -39,6 +39,7 @@ const TodayWeather = ({ weatherData }) => {
               year: "numeric",
             })}
           </p>
+          
           <p className="text-lg pt-2 pb-2">Time:{new Date().toLocaleTimeString()}</p>
           <p className="text-lg pt-2 pb-8">Location: {weatherData.name}, {weatherData.sys.country}</p>
         </div>
