@@ -1,12 +1,6 @@
 import React from "react";
 
 const TodayWeather = ({ weatherData }) => {
-//   console.log(weatherData);
-
-  // if (!weatherData) {
-
-  // }
-
   return (
     <div>
       <h2 className="text-2xl font-bold  text-purple-800 flex justify-center">
@@ -22,13 +16,13 @@ const TodayWeather = ({ weatherData }) => {
         </div>
         <div className="flex flex-col p-10 ">
           <p className="text-4xl font-semibold pb-2 -mt-4">
-             {weatherData.main.temp.toFixed(0)}&#8451;
+            {weatherData.main.temp.toFixed(0)}&#8451;
           </p>
           <p className="text-lg ">
             Feels Like: {weatherData.main.feels_like.toFixed(0)}&#8451;
           </p>
           <p className="text-lg pb-4 border-b-[1px] border-black capitalize">
-          Description: {weatherData.weather[0].description}
+            Description: {weatherData.weather[0].description}
           </p>
           <p className="text-lg pt-4 pb-2">
             Date:
@@ -39,9 +33,13 @@ const TodayWeather = ({ weatherData }) => {
               year: "numeric",
             })}
           </p>
-          
-          <p className="text-lg pt-2 pb-2">Time:{new Date().toLocaleTimeString()}</p>
-          <p className="text-lg pt-2 pb-8">Location: {weatherData.name}, {weatherData.sys.country}</p>
+
+          <p className="text-lg pt-2 pb-2">
+            Time:{new Date().toLocaleTimeString()}
+          </p>
+          <p className="text-lg pt-2 pb-8">
+            Location: {weatherData.name}, {weatherData.sys.country}
+          </p>
         </div>
       </div>
     </div>

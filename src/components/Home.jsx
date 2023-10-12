@@ -8,7 +8,6 @@ const Home = () => {
   const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState(null);
 
-  // console.log(location);
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -32,7 +31,6 @@ const Home = () => {
       );
       const data = response.data;
       setWeatherData(data);
-      console.log(data);
     } catch (error) {
       console.error("Error fetching Weather data:", error);
       alert("Location Not Found");
