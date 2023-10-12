@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Img from "../../public/img/1.jpg";
 import TodayWeather from "./TodayWeather";
 import TodayHighlights from "./TodayHighlights";
 import axios from "axios";
@@ -7,7 +6,6 @@ import axios from "axios";
 const Home = () => {
   const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-
 
   useEffect(() => {
     const fetchLocation = async () => {
